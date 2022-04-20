@@ -6,7 +6,7 @@
 
 Tools for working with Pandas, Plotly, and Dash.
 
-[See examples](https://github.com/lucasjamar/pandas-plotly/main/examples/app.py)
+[See examples](https://github.com/lucasjamar/pandas-plotly/blob/main/examples/app.py)
 
 ## Available extensions for `Dash`:
 * `df.pp.to_dash_table()` for getting the `data` and `columns` for `dash_table` from a flat or multi-index `pd.DataFrame`.
