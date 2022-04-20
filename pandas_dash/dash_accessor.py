@@ -3,7 +3,7 @@ from typing import Dict, Tuple, List
 import pandas as pd
 
 
-@pd.api.extensions.register_dataframe_accessor("pp")
+@pd.api.extensions.register_dataframe_accessor("dash")
 class DashAccessor:
     def __init__(self, pandas_obj):
         self._validate(pandas_obj)
