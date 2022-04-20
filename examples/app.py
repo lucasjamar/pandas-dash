@@ -1,15 +1,15 @@
 from dash import Dash, html, dash_table, dcc
 import plotly.express as px
-import pandas_plotly
+import pandas_dash
 
 
 # App
-app = Dash(__name__, title="Pandas Plotly Dashboard")
+app = Dash(__name__, title="Pandas-Dash")
 server = app.server
 gdp = px.data.gapminder()
-country_options = gdp.pp.to_options(label="country", title="continent")
+country_options = gdp.dash.to_options(label="country", title="continent")
 flat_data = gdp.head(50)
-flat_data, flat_columns = flat_data.pp.to_dash_table()
+flat_data, flat_columns = flat_data.dash.to_dash_table()
 
 gdp["country"] = (
     "["
@@ -28,7 +28,7 @@ gdp = (
     .round(2)
     .reset_index()
 )
-gdp, gdp_columns = gdp.pp.to_dash_table(
+gdp, gdp_columns = gdp.dash.to_dash_table(
     column_properties={"country": {"presentation": "markdown"}}
 )
 tips = px.data.tips()
@@ -41,7 +41,7 @@ tips = (
     .reset_index()
     .round(2)
 )
-tips, tips_columns = tips.pp.to_dash_table(
+tips, tips_columns = tips.dash.to_dash_table(
     column_properties={"country": {"presentation": "markdown"}}
 )
 

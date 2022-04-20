@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "pandas-plotly"
+name = "pandas-dash"
 version = "0.1.0"
-description = "Tools to make working with Pandas, Plotly, and Dash easier."
+description = "Tools for working with Pandas, Plotly, and Dash."
 authors = ["lucas.jamar <lucasjamar@hotmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/lucasjamar/pandas-plotly"
+repository = "https://github.com/lucasjamar/pandas-dash"
 exclude = ["examples/*"]
 
 [tool.poetry.dependencies]

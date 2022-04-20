@@ -1,1 +1,1 @@
-from .dash_shortcuts import DashAccessor
+from .dash_accessor import DashAccessor

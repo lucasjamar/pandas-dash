@@ -1,54 +1,132 @@
-*.egg-info
+##########################
+# Common files
 
-*.pyc
+# IntelliJ
+.idea/
+*.iml
+out/
+.idea_modules/
 
-*.gz
+### macOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+.Trashes
 
+# Vim
 *~
+.*.swo
+.*.swp
 
-# Don't ignore dataset files
-!*.csv.gz
+# emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
 
-*.ipynb
+# JIRA plugin
+atlassian-ide-plugin.xml
 
-*.coverage
+# C extensions
+*.so
 
-*.tox
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-debug_script.py
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-test_output.txt
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-plotly/api/v2/spectacle_presentations.py
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-plotly/presentation_objs/
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
 
-.idea
+# Translations
+*.mo
+*.pot
 
-node_modules/
+# Django stuff:
+*.log
+.static_storage/
+.media/
+local_settings.py
 
-.pytest_cache
+# Flask stuff:
+instance/
+.webassets-cache
 
-# virtual envs
-vv
-venv*
+# Scrapy stuff:
+.scrapy
 
-# dist files
-build
-dist
-plotly.egg-info/
+# Sphinx documentation
+docs/_build/
 
-plotly/tests/test_orca/images/*/failed
-plotly/tests/test_orca/images/*/tmp
-/plotly-package/plotly/tests/test_core/test_offline/plotly.min.js
-temp-plot.html
-.vscode
-doc/python/.ipynb_checkpoints
-doc/python/.mapbox_token
-doc/.ipynb_checkpoints
-tags
-doc/check-or-enforce-order.py
+# PyBuilder
+target/
 
-packages/javascript/jupyterlab-plotly/lib/
-packages/python/plotly/jupyterlab_plotly/labextension/
-packages/python/plotly/jupyterlab_plotly/nbextension/index.js*
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+.ipython/profile_default/history.sqlite
+.ipython/profile_default/startup/README
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
