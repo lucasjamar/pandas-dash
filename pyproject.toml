@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pandas-dash"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tools for working with Pandas, Plotly, and Dash."
 authors = ["lucas.jamar <lucasjamar@hotmail.com>"]
 license = "Apache-2.0"

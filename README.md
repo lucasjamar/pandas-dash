@@ -9,7 +9,7 @@ Tools for working with Pandas, Plotly, and Dash.
 [See examples](https://github.com/lucasjamar/pandas-dash/blob/main/examples/app.py)
 
 ## Available extensions for `Dash`
-* `df.pp.to_dash_table()` for getting the `data` and `columns` for `dash_table` from a flat or multi-index `pd.DataFrame`.
-* `df.pp.to_options("my_column")` for creating `dcc.Dropdown` options from the column of a `pd.DataFrame`.
+* `df.dash.to_dash_table()` for getting the `data` and `columns` for `dash_table` from a flat or multi-index `pd.DataFrame`.
+* `df.dash.to_options("my_column")` for creating `dcc.Dropdown` options from the column of a `pd.DataFrame`.
 
 ## Extensions for `Plotly` coming soon.

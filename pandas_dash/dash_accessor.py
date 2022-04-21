@@ -17,28 +17,40 @@ class DashAccessor:
     def to_dash_table(
         self,
         separator: str = "_",
-        properties: Dict = {},
-        column_properties: Dict = {},
+        properties: Dict = None,
+        column_properties: Dict = None,
     ) -> Tuple:
+        if column_properties is None:
+            column_properties = {}
+        if properties is None:
+            properties = {}
         df = self._obj.copy()
         column_dicts, new_column_names = [], []
         for column in df.columns:
             if isinstance(column, (list, tuple)):
-                column_str = [str(x) for x in column]
+                column_str = []
+                for x in column:
+                    if pd.notnull(x):
+                        x = str(x)
+                    else:
+                        x = ""
+                    column_str.append(x)
                 non_empty_column_str = [x for x in column_str if x != ""]
                 if "" in column_str:
                     last_non_empty_str = non_empty_column_str[-1]
-                    column_str = [x for x in column_str if x != last_non_empty_str] + [
-                        last_non_empty_str
-                    ]
+                    column_str = [x for x in column_str if x != last_non_empty_str]
+                    column_str.append(last_non_empty_str)
                 column_id = f"{separator}".join(non_empty_column_str)
             else:
                 column_id = str(column)
                 column_str = column_id
             new_column_names.append(column_id)
-            column_dict = {"id": column_id, "name": column_str, **properties}
-            if column_id in column_properties:
-                column_dict.update(column_properties[column_id])
+            column_dict = {"id": column_id, "name": column_str}
+            if properties:
+                column_dict.update(properties)
+            if column_properties:
+                if column_id in column_properties:
+                    column_dict.update(column_properties[column_id])
             column_dicts.append(column_dict)
         df.columns = new_column_names
         df = df.to_dict("records")

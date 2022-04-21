@@ -1,3 +1,9 @@
+# Release 0.1.1
+
+## Minor bug fix
+* Replaced default args from dict to None since they are mutable.
+* Fixed a bug where certain multi-index have nan values.
+
 # Release 0.1.0
 
 ## Major features and improvements
