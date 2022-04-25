@@ -1,3 +1,8 @@
+# Release 0.1.2
+
+## Major features and improvements
+* `to_pivot_table()` extension to create data for `dash_pivottable.PivotTable`
+
 # Release 0.1.1
 
 ## Minor bug fix

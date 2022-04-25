@@ -56,6 +56,12 @@ class DashAccessor:
         df = df.to_dict("records")
         return df, column_dicts
 
+    def to_pivot_table(
+        self,
+    ) -> List:
+        data = [self._obj.columns.values.tolist()] + self._obj.values.tolist()
+        return data
+
     def to_options(
         self,
         label: str,

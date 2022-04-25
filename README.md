@@ -11,5 +11,6 @@ Tools for working with Pandas, Plotly, and Dash.
 ## Available extensions for `Dash`
 * `df.dash.to_dash_table()` for getting the `data` and `columns` for `dash_table` from a flat or multi-index `pd.DataFrame`.
 * `df.dash.to_options("my_column")` for creating `dcc.Dropdown` options from the column of a `pd.DataFrame`.
+* `df.dash.to_pivot_table()` for creating the date necessary for `dash_pivottable.PivotTable`.
 
 ## Extensions for `Plotly` coming soon.
