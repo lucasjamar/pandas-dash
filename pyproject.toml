@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pandas-dash"
-version = "0.1.2"
+version = "0.1.3"
 description = "Tools for working with Pandas, Plotly, and Dash."
 authors = ["lucas.jamar <lucasjamar@hotmail.com>"]
 license = "Apache-2.0"
@@ -9,12 +9,12 @@ repository = "https://github.com/lucasjamar/pandas-dash"
 exclude = ["examples/*"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-pandas = "^1"
+python = ">=3.8"
+pandas = ">=2.0.0"
 dash = "^2"
 
 [tool.poetry.dev-dependencies]
-pandas = "^1"
+pandas = "^2"
 dash = "^2"
 black = "^22"
 

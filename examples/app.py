@@ -1,9 +1,10 @@
 from dash import Dash, html, dash_table, dcc
 import plotly.express as px
-import pandas_dash
+import pandas_dash as pdd
 
 
 # App
+print(pdd.__version__)
 app = Dash(__name__, title="Pandas-Dash")
 server = app.server
 gdp = px.data.gapminder()
@@ -28,6 +29,8 @@ gdp = (
     .round(2)
     .reset_index()
 )
+styling, _ = pdd.heatmap(gdp, n_bins=9)
+print(styling)
 gdp, gdp_columns = gdp.dash.to_dash_table(
     column_properties={"country": {"presentation": "markdown"}}
 )
@@ -41,9 +44,7 @@ tips = (
     .reset_index()
     .round(2)
 )
-tips, tips_columns = tips.dash.to_dash_table(
-    column_properties={"country": {"presentation": "markdown"}}
-)
+tips, tips_columns = tips.dash.to_dash_table()
 
 app.layout = html.Div(
     children=[
@@ -58,6 +59,7 @@ app.layout = html.Div(
             sort_action="native",
             sort_mode="multi",
             filter_action="native",
+            style_data_conditional=styling,
             merge_duplicate_headers=True,
         ),
         dash_table.DataTable(
